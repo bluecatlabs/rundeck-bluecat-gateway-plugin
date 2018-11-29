@@ -1,0 +1,58 @@
+name: gateway-plugin
+version: 1.0.0
+rundeckPluginVersion: 1.2
+author: StevenD
+date: 11/20/2018
+providers:
+  - name: gateway-workflow
+    service: RemoteScriptNodeStep
+    title: 'gateway-rundeck'
+    description: 'Calls gateway endpoints'
+    plugin-type: script
+    script-interpreter: /usr/bin/env bash
+    script-file: gateway_bash
+    script-args: ${config.username} ${config.password} ${config.url} ${config.restcall} ${config.endpoint} ${config.expectedResult}
+    config:
+      - type: String
+        name: username
+        title: username
+        required: true
+        description: 'login username'
+      - type: String
+        name: password
+        title: password
+        required: true
+        description: 'login password'
+      - type: String
+        name: url
+        title: URL
+        required: true
+        description: 'url of gateway'
+      - type: Select
+        name: restcall
+        title: REST call
+        values:
+            - POST
+            - GET
+            - DELETE
+            - PATCH
+        required: true
+        description: 'the REST call'
+      - type: String
+        name: endpoint
+        title: Gateway Endpoint
+        required: true
+        description: 'the endpoint on the gateway , for REST endpoints please add /api/v1/ to the beginning of the end point'
+      - type: String
+        name: additionalData
+        title: Additional Data
+        description: 'additional data for endpoints, Must be in JSON format'
+        renderingOptions:
+            displayType: CODE
+      - type: String
+        name: expectedResult
+        title: Expected Return
+        description: 'the expected output of the call'
+        renderingOptions:
+            displayType: CODE
+

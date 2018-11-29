@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -e
+
+token=$(curl -d "username=${RD_CONFIG_USERNAME}&password=${RD_CONFIG_PASSWORD}" -X POST ${RD_CONFIG_URL}/rest_login | grep -i access_token* | awk -F '"' '{print $4}')
+
+
+if [ -z "${RD_CONFIG_ADDITIONALDATA}" ]
+then
+	result=$(curl -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json")
+else
+	result=$(curl -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json" -d "${RD_CONFIG_ADDITIONALDATA}")
+fi
+
+if [ -z "${RD_CONFIG_EXPECTEDRESULT}" ]
+then
+    echo $result
+    exit 0
+else
+    if [[ $result = *${RD_CONFIG_EXPECTEDRESULT}* ]]
+    then
+        echo $result
+        echo Expected result found
+        exit 0
+    else
+        echo $result
+        echo Expected result NOT found
+        exit 1
+    fi
+fi
+
