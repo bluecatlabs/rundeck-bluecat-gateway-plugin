@@ -3,10 +3,12 @@
 This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that provides the ability to call BlueCat Gateway endpoints from the Rundeck UI. This Plugin is built to utilize the [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow on Gateway Verions [18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater 
 
 ## Prerequisites
+* BlueCat Address Manager 3000 appliance or greater running software version 8.2.0 or greater
+* BlueCat Gateway [v18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags)
 
-* BlueCat Address Manager 3000 appliance or greater running software version 8.1.1 or greater
-* BlueCat Gateway [v18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater Instance Running
-* BlueCat Gateway has [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow installed and permissioned properly
+## Requirements
+* BlueCat Gateway has [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) community workflow installed and permissioned properly
+* BlueCat Gateway container running
 * Rundeck Instance Running
 
 
