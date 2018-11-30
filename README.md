@@ -4,7 +4,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 
 ## Prerequisites
 * BlueCat Address Manager 3000 appliance or greater running software version 8.2.0 or greater
-* BlueCat Gateway [v18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags)
+* BlueCat Gateway [v18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater
 
 ## Requirements
 * BlueCat Gateway has [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) community workflow installed and permissioned properly
