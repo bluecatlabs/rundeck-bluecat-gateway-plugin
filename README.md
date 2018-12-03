@@ -24,9 +24,9 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   mkdir /plugins
   docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
-  2. put the .zip file into /home/rundeck/libext with: <br />
+  2. Copy the repo into a .zip file, then put the .zip file into /home/rundeck/libext with: <br />
   ```
-  docker cp bluecat-gateway-rundeck-plugin.zip rundeck:/home/rundeck/libext/
+  docker cp rundeck-bluecat-gateway-plugin.zip rundeck:/home/rundeck/libext/
   ```
   3. then restart the docker container with : <br />
   ```
