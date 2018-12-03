@@ -35,6 +35,11 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   ```
 
 ## Usage
+* Go to the webpage specificed by RUNDECK_GRAILS_SERVER in the docker command or where ever you configured it
+
+* On first login, use the credentials to log in <br /> Username: Admin <br /> Password: Admin
+
+* Create a Project then a job under the project
 
 * Select the gateway-workflow in the workflow tab when creating a job and fill in the boxes below
 
