@@ -2,14 +2,19 @@
 
 set -e
 
-token=$(curl -d "username=${RD_CONFIG_USERNAME}&password=${RD_CONFIG_PASSWORD}" -X POST ${RD_CONFIG_URL}/rest_login | grep -i access_token* | awk -F '"' '{print $4}')
+token=$(curl -s -d "username=${RD_CONFIG_USERNAME}&password=${RD_CONFIG_PASSWORD}" -X POST ${RD_CONFIG_URL}/rest_login | grep -i access_token* | awk -F '"' '{print $4}')
 
+if [ -z "$token" ]
+then
+	echo 'could not login with credentials' 
+        exit 1
+fi
 
 if [ -z "${RD_CONFIG_ADDITIONALDATA}" ]
 then
-	result=$(curl -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json")
+	result=$(curl -s -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json")
 else
-	result=$(curl -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json" -d "${RD_CONFIG_ADDITIONALDATA}")
+	result=$(curl -s -X ${RD_CONFIG_RESTCALL} "${RD_CONFIG_URL}/${RD_CONFIG_ENDPOINT}" -H "auth: Basic $token" -H "accept: application/json" -H "Content-Type: application/json" -d "${RD_CONFIG_ADDITIONALDATA}")
 fi
 
 if [ -z "${RD_CONFIG_EXPECTEDRESULT}" ]
