@@ -18,7 +18,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   3. Drop it in your libext folder <br /> <br />
   4. restart rundeck <br /> <br />
 
-### Docker Installation
+### Installation via Docker
   1. if you are using Rundeck-docker you will need to mount a data volume to libext with: <br />
   ```
   docker run --name rundeck -v data:/home/rundeck/server/data -v plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
@@ -29,8 +29,8 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   ```
   3. then restart the docker container with : <br />
   ```
-  docker stop rundeck <br />
-  docker rm rundeck <br />
+  docker stop rundeck 
+  docker rm rundeck 
   docker run --name rundeck -v data:/home/rundeck/server/data -v plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
 
