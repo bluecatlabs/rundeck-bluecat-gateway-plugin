@@ -21,7 +21,8 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 ### Installation via Docker
   1. if you are using Rundeck-docker you will need to mount a data volume to libext with: <br />
   ```
-  docker run --name rundeck -v data:/home/rundeck/server/data -v plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
+  mkdir /plugins
+  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
   2. put the .zip file into /home/rundeck/libext with: <br />
   ```
@@ -31,7 +32,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   ```
   docker stop rundeck 
   docker rm rundeck 
-  docker run --name rundeck -v data:/home/rundeck/server/data -v plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
+  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
 
 ## Usage
@@ -41,7 +42,11 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 
 * Create a Project then a job under the project
 
-* Select the gateway-workflow in the workflow tab when creating a job and fill in the boxes below
+* Select the gateway-workflow in the workflow tab 
+
+![Screenshot3](resources/SelectRundeck.PNG)
+
+* when creating a job and fill in the boxes below
 
 ![Alt Screenshot](resources/First_page.PNG)
 
