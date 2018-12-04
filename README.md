@@ -38,7 +38,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 ## Usage
 * Go to the webpage specificed by RUNDECK_GRAILS_SERVER in the docker command or where ever you configured it
 
-* On first login, use the credentials to log in <br /> Username: Admin <br /> Password: Admin
+* On first login, use the credentials to log in <br /> Username: admin <br /> Password: admin
 
 * Create a Project then a job under the project
 
