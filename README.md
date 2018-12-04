@@ -16,10 +16,10 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   1. Download and start [Rundeck](http://rundeck.org/downloads.html), or install the docker [version](https://hub.docker.com/r/rundeck/rundeck/) <br /> <br />
   2. Download this repository as a .zip file <br /> <br />
   3. Drop it in your libext folder <br /> <br />
-  4. restart rundeck <br /> <br />
+  4. Restart rundeck <br /> <br />
 
 ### Installation via Docker
-  1. if you are using Rundeck-docker you will need to mount a data volume to libext with: <br />
+  1. If you are using Rundeck-docker you will need to mount a data volume to libext with: <br />
   ```
   mkdir /plugins
   docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
@@ -28,7 +28,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   ```
   docker cp rundeck-bluecat-gateway-plugin.zip rundeck:/home/rundeck/libext/
   ```
-  3. then restart the docker container with : <br />
+  3. Then restart the docker container with : <br />
   ```
   docker stop rundeck 
   docker rm rundeck 
@@ -46,11 +46,11 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 
 ![Screenshot3](resources/SelectRundeck.PNG)
 
-* when creating a job and fill in the boxes below
+* When creating a job and fill in the boxes below
 
 ![Alt Screenshot](resources/First_page.PNG)
 
-* NOTE: the additional data should always be in JSON format
+* NOTE: The additional data should always be in JSON format
 
 ![Screenshot2](resources/expected_result.PNG)
 
