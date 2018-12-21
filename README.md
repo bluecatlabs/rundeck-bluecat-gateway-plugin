@@ -54,7 +54,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 
 ![Screenshot2](resources/expected_result.PNG)
 
-* For complete information on Rundeck refer to https://rundeck.org/docs/
+* For complete information on Rundeck refer to https://docs.rundeck.com/docs/
 
 
 
