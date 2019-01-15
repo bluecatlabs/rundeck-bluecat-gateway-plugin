@@ -22,7 +22,7 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   1. If you are using Rundeck-docker you will need to mount a data volume to libext with: <br />
   ```
   mkdir /plugins
-  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
+  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_URL=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
   2. Copy the repo into a .zip file, then put the .zip file into /home/rundeck/libext with: <br />
   ```
@@ -32,11 +32,11 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   ```
   docker stop rundeck 
   docker rm rundeck 
-  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_SERVER=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
+  docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_URL=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
 
 ## Usage
-* Go to the webpage specificed by RUNDECK_GRAILS_SERVER in the docker command or where ever you configured it
+* Go to the webpage specificed by RUNDECK_GRAILS_URL in the docker command or where ever you configured it
 
 * On first login, use the credentials to log in <br /> Username: admin <br /> Password: admin
 
