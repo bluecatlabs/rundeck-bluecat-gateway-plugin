@@ -1,6 +1,6 @@
 # Rundeck BlueCat Gateway Plugin
 
-This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that provides the ability to call BlueCat Gateway endpoints from the Rundeck UI. This Plugin is built to utilize the [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow on Gateway Verions [18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater 
+This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that provides the ability to call BlueCat Gateway endpoints from the Rundeck UI. This Plugin is built to utilize the [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow on Gateway Verions [18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater.
 
 ## Prerequisites
 * BlueCat Address Manager 3000 appliance or greater running software version 8.2.0 or greater
@@ -11,6 +11,8 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 * BlueCat Gateway container running
 * Rundeck Instance Running
 
+## Tutorial
+* Refer to [Making Gateway Work for You](#making-gateway-work-for-you) for a video tutorial on setting up Rundeck and how to use it effectively with BlueCat Gateway.
 
 ## Installation
   1. Download and start [Rundeck](http://rundeck.org/downloads.html), or install the docker [version](https://hub.docker.com/r/rundeck/rundeck/) <br /> <br />
@@ -54,8 +56,11 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 
 ![Screenshot2](resources/expected_result.PNG)
 
+## Documentation
 * For complete information on Rundeck refer to https://docs.rundeck.com/docs/
 
+## Making Gateway Work for You
+* Episode 3 of the Making Gateway Work for You Webinar series focuses on using Rundeck for scheduling workflows to enhance the efficiency of your organization’s DNS operations. In this episode, BlueCat’s Solution Consultant, Murtaza Haider, will walk you through the newly released integration between Gateway and Rundeck, an automated scheduling platform. Using example workflows, you’ll learn how to use Rundeck to schedule reports and easily change/revert IP objects. https://www.bluecatnetworks.com/resource/making-gateway-work-for-you-scheduling/
 
 
 
