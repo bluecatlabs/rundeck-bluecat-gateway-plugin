@@ -1,6 +1,6 @@
 # Rundeck BlueCat Gateway Plugin
 
-This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that provides the ability to call BlueCat Gateway endpoints from the Rundeck UI. This Plugin is built to utilize the [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow on Gateway Verions [18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater.
+This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that provides the ability to call BlueCat Gateway endpoints from the Rundeck UI. This Plugin is built to utilize the [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) workflow on Gateway versions [18.10.2](https://quay.io/repository/bluecat/gateway?tag=latest&tab=tags) or greater.
 
 ## Prerequisites
 * BlueCat Address Manager 3000 appliance or greater running software version 8.2.0 or greater
@@ -10,9 +10,6 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
 * BlueCat Gateway has [rest_api](https://github.com/bluecatlabs/gateway-workflows/tree/master/Community/rest_api) community workflow installed and permissioned properly
 * BlueCat Gateway container running
 * Rundeck Instance Running
-
-## Tutorial
-* Refer to [Making Gateway Work for You](#making-gateway-work-for-you) for a video tutorial on setting up Rundeck and how to use it effectively with BlueCat Gateway.
 
 ## Installation
   1. Download and start [Rundeck](http://rundeck.org/downloads.html), or install the docker [version](https://hub.docker.com/r/rundeck/rundeck/) <br /> <br />
@@ -36,6 +33,9 @@ This is a Plugin for [Rundeck](https://www.rundeck.com/open-source) 3.0.8 that p
   docker rm rundeck 
   docker run --name rundeck -v data:/home/rundeck/server/data -v /plugins:/home/rundeck/libext -p 4440:4440 -e RUNDECK_GRAILS_URL=http://<ip address of your host machine>:4440 rundeck/rundeck:3.0.8
   ```
+
+## Tutorial
+* Refer to [Making Gateway Work for You](#making-gateway-work-for-you) for a video tutorial on setting up Rundeck and how to use it effectively with BlueCat Gateway.
 
 ## Usage
 * Go to the webpage specificed by RUNDECK_GRAILS_URL in the docker command or where ever you configured it
